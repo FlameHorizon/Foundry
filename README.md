@@ -35,10 +35,8 @@ This Bash script automates the setup of a development environment on a fresh Ubu
 
 ## 📁 Requirements
 
-Make sure the following files are present in the same directory as the script:
-  - `alacritty.toml` – configuration file for Alacritty
-  - `ulauncher.desktop` – autostart entry for Ulauncher
-  - `ulauncher.json` – preconfigured Ulauncher settings
+The only requirement here is that You run this script on Ubuntu 24.04. Other
+system were not tested.
 
 # 🧪 Usage
 
