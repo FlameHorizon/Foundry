@@ -29,7 +29,7 @@ This Bash script automates the setup of a development environment on a fresh Ubu
   - Installs and configures Ulauncher
   - Enables dark theme system-wide
   - Disables Ubuntu Dock
-  - Sets workspace switching shortcuts to Alt + 1..9
+  - Sets workspace switching shortcuts to Super + 1..9
   - Fixes number of GNOME workspaces to 6
 
 ## 📁 Requirements

@@ -138,9 +138,8 @@ for i in $(seq 1 9); do
 done
 
 # Sets workspaces shortcut.
-# NOTE: I've tried to map workspace to <Super>+1 but it collides with the dock.
 for i in {1..9}; do 
-  gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-$i" "['<Alt>$i']" ; 
+  gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-$i" "['<Super>$i']" ; 
 done
 
 # Set static number of workspaces to 6 without ability to expand.
