@@ -150,7 +150,6 @@ gsettings set org.gnome.desktop.wm.preferences num-workspaces 6
 gsettings set "org.gnome.settings-daemon.plugins.media-keys" "terminal" "['<Super>Return']"
 
 # Setting up wallpaper
-
 BACKGROUND_ORG_PATH="wall.png"
 BACKGROUND_DEST_DIR="$HOME/.local/share/backgrounds"
 BACKGROUND_DEST_PATH="$BACKGROUND_DEST_DIR/wall.png"
@@ -176,3 +175,7 @@ fi
 # -- DarkReader
 # -- LastPass
 # -- AdBlock for Firefox
+# - Firefox settings
+# -- Theme - Everforest Dark Medium Theme by Bullfinch
+# -- Websearch engine - DuckDuckGo
+# -- Search Shortcuts
