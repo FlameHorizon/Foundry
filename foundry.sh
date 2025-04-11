@@ -21,7 +21,6 @@ packages=(
   xclip
   dotnet-sdk-9.0
   alacritty
-  chrome-gnome-shell
   ulauncher
 )
 
