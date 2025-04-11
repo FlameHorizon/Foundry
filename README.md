@@ -11,7 +11,7 @@ This Bash script automates the setup of a development environment on a fresh Ubu
 
 - Installs common dev tools:
   - `curl`, `git`, `ripgrep`, `make`, `gcc`, `unzip`, `xclip`
-  - `dotnet-sdk-9.0`, `alacritty`, `chrome-gnome-shell`, `ulauncher`
+  - `dotnet-sdk-9.0`, `alacritty`, `chrome-gnome-shell`, `ulauncher`, `VS Code`
 
 - Install common utilities:
  - `spotify`

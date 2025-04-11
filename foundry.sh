@@ -87,6 +87,17 @@ else
   echo "Google Chrome is already installed. Skipping..."
 fi
 
+# Install VS Code from .deb package, version 1.99.
+# If this version is outdated, after next apt update, it will be updated.
+if [ ! -e /usr/bin/code ] ; then
+  wget -O "code.deb" "https://vscode.download.prss.microsoft.com/dbazure/download/stable/4949701c880d4bdb949e3c0e6b400288da7f474b/code_1.99.2-1744250061_amd64.deb"
+
+  sudo apt install ./code.deb
+  rm ./code.deb
+else
+  echo "Visual Studio Code is already installed. Skipping..."
+fi
+
 sudo snap install spotify
 
 # At this point, installation portion is completed. Now it is time to configure.
