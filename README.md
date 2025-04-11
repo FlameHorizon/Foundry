@@ -12,7 +12,7 @@ This Bash script automates the setup of a development environment on a fresh Ubu
 
 - Installs common dev tools:
   - `curl`, `git`, `ripgrep`, `make`, `gcc`, `unzip`, `xclip`
-  - `dotnet-sdk-9.0`, `alacritty`, `ulauncher`, `VS Code`
+  - `dotnet-sdk-9.0`, `alacritty`, `ulauncher`, `VS Code`, `virtualbox`
 
 - Install common utilities:
  - `spotify`, `obs-studio`, `vlc`

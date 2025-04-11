@@ -93,6 +93,15 @@ else
   echo "Google Chrome is already installed. Skipping..."
 fi
 
+# Install Virtualbox from .deb package.
+if [ ! -e /usr/bin/virtualbox ] ; then
+  wget https://download.virtualbox.org/virtualbox/7.1.6/virtualbox-7.1_7.1.6-167084~Ubuntu~noble_amd64.deb -o virtualbox.deb
+  sudo apt install ./virtualbox.deb
+  rm ./virtualbox.deb 
+else
+  echo "Virtualbox is already installed. Skipping..."
+fi
+
 # Install VS Code from .deb package, version 1.99.
 # If this version is outdated, after next upgrade, it will be updated.
 if [ ! -e /usr/bin/code ] ; then
