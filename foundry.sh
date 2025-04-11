@@ -199,6 +199,8 @@ alias gc='git commit'
 alias dr='dotnet run'
 alias db='dotnet build'
 alias dw='dotnet watch'
+
+alias nv="nvim ."
 EOF
 
 echo "Installation completed. Please reboot your machine now."
