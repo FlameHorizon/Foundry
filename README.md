@@ -22,6 +22,7 @@ This Bash script automates the setup of a development environment on a fresh Ubu
   - fzf (fuzzy finder)
   - Nerd Fonts (Hermit)
   - Google Chrome
+  - git credential helper
 
 - Applies GNOME customizations:
   - Sets Alacritty as default terminal

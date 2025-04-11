@@ -12,9 +12,9 @@ sudo apt-get --assume-yes update
 sudo apt-get --assume-yes upgrade
 
 packages=(
-  curl=8.5.0-2ubuntu10.6
-  git=1:2.43.0-1ubuntu7.2
-  ripgrep=14.1.0-1
+  curl
+  git
+  ripgrep
   make
   gcc
   unzip
@@ -35,6 +35,9 @@ for pkg in "${packages[@]}"; do
     sudo apt-get install --assume-yes "$pkg"
   fi
 done
+
+# Configure git store to save passwords
+git config --global credential.helper store
 
 # Some packages can't be installed from APT with wanted version because
 # they are not available yet. Such example is neovim where APT version 
@@ -127,3 +130,9 @@ done
 # Set static number of workspaces to 6 without ability to expand.
 gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 6
+
+# Things to install manually
+# - Firefox extensions
+# -- DarkReader
+# -- LastPass
+# -- AdBlock for Firefox
