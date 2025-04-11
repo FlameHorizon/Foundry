@@ -84,6 +84,8 @@ else
   echo "Google Chrome is already installed. Skipping..."
 fi
 
+sudo snap install spotify
+
 # At this point, installation portion is completed. Now it is time to configure.
 # Alacritty needs everforest theme.
 

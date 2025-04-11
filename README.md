@@ -13,6 +13,9 @@ This Bash script automates the setup of a development environment on a fresh Ubu
   - `curl`, `git`, `ripgrep`, `make`, `gcc`, `unzip`, `xclip`
   - `dotnet-sdk-9.0`, `alacritty`, `chrome-gnome-shell`, `ulauncher`
 
+- Install common utilities:
+ - `spotify`
+
 - Installs **Neovim 0.11.0 manually* (APT version is too old)
 
 - Installs and configures:
