@@ -7,6 +7,7 @@ This Bash script automates the setup of a development environment on a fresh Ubu
 - Adds PPAs for:
   - .NET SDK via `dotnet/backports`
   - Ulauncher via `agornostal/ulauncher`
+  - OBS via via `obsproject/obs-studio`
   - Updates and upgrades system packages
 
 - Installs common dev tools:
@@ -14,7 +15,7 @@ This Bash script automates the setup of a development environment on a fresh Ubu
   - `dotnet-sdk-9.0`, `alacritty`, `ulauncher`, `VS Code`
 
 - Install common utilities:
- - `spotify`
+ - `spotify`, `obs-studio`, `vlc`
 
 - Installs **Neovim 0.11.0 manually* (APT version is too old)
 

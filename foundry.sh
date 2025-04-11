@@ -7,6 +7,9 @@ sudo add-apt-repository -y ppa:dotnet/backports
 sudo add-apt-repository universe -y
 sudo add-apt-repository ppa:agornostal/ulauncher -y
 
+# PPA for obs-studio
+sudo add-apt-repository ppa:obsproject/obs-studio
+
 # Before doing anything else, ALWAYS update current packages.
 sudo apt-get --assume-yes update
 sudo apt-get --assume-yes upgrade
@@ -22,6 +25,8 @@ packages=(
   dotnet-sdk-9.0
   alacritty
   ulauncher
+  obs-studio
+  vlc
 )
 
 for pkg in "${packages[@]}"; do
