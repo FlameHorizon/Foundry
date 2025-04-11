@@ -132,6 +132,11 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 # Disable dock but not remove it entirely
 gnome-extensions disable ubuntu-dock@ubuntu.com
 
+# Disable dock's hotkeys.
+for i in $(seq 1 9); do 
+  gsettings set org.gnome.shell.keybindings switch-to-application-${i} []; 
+done
+
 # Sets workspaces shortcut.
 # NOTE: I've tried to map workspace to <Super>+1 but it collides with the dock.
 for i in {1..9}; do 
