@@ -88,7 +88,7 @@ else
 fi
 
 # Install VS Code from .deb package, version 1.99.
-# If this version is outdated, after next apt update, it will be updated.
+# If this version is outdated, after next upgrade, it will be updated.
 if [ ! -e /usr/bin/code ] ; then
   wget -O "code.deb" "https://vscode.download.prss.microsoft.com/dbazure/download/stable/4949701c880d4bdb949e3c0e6b400288da7f474b/code_1.99.2-1744250061_amd64.deb"
 
@@ -175,7 +175,14 @@ fi
 # -- DarkReader
 # -- LastPass
 # -- AdBlock for Firefox
+#
 # - Firefox settings
 # -- Theme - Everforest Dark Medium Theme by Bullfinch
 # -- Websearch engine - DuckDuckGo
 # -- Search Shortcuts
+#
+# - Google Chrome extensions
+# -- DarkReader
+#
+# - Google Chrome settings
+# -- Theme - Everforest Chrome Theme
