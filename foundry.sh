@@ -149,6 +149,18 @@ gsettings set org.gnome.desktop.wm.preferences num-workspaces 6
 # Terminal window can be opened using Super+Return (Win key + Enter)
 gsettings set "org.gnome.settings-daemon.plugins.media-keys" "terminal" "['<Super>Return']"
 
+# Setting up wallpaper
+
+BACKGROUND_ORG_PATH="wall.png"
+BACKGROUND_DEST_DIR="$HOME/.local/share/backgrounds"
+BACKGROUND_DEST_PATH="$BACKGROUND_DEST_DIR/wall.png"
+
+if [ ! -d "$BACKGROUND_DEST_DIR" ]; then mkdir -p "$BACKGROUND_DEST_DIR"; fi
+
+[ ! -f $BACKGROUND_DEST_PATH ] && cp $BACKGROUND_ORG_PATH $BACKGROUND_DEST_PATH
+gsettings set org.gnome.desktop.background picture-uri $BACKGROUND_DEST_PATH
+gsettings set org.gnome.desktop.background picture-uri-dark $BACKGROUND_DEST_PATH
+
 # Making bash case-insensitive
 #
 # If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
