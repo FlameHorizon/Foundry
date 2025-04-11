@@ -176,6 +176,21 @@ if [ ! -a ~/.inputrc ] ; then
   echo 'set completion-ignore-case On' >> ~/.inputrc
 fi
 
+cat << 'EOF' >> ~/.bashrc
+
+# Custom aliases
+alias '..'='cd ..'
+
+alias gs='git status'
+alias gpl='git pull'
+alias gps='git push'
+alias gc='git commit'
+
+alias dr='dotnet run'
+alias db='dotnet build'
+alias dw='dotnet watch'
+EOF
+
 echo "Installation completed. Please reboot your machine now."
 
 # Things to install manually
