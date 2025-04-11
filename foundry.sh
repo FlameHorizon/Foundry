@@ -176,6 +176,8 @@ if [ ! -a ~/.inputrc ] ; then
   echo 'set completion-ignore-case On' >> ~/.inputrc
 fi
 
+echo "Installation completed. Please reboot your machine now."
+
 # Things to install manually
 # - Firefox extensions
 # -- DarkReader
