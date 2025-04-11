@@ -8,7 +8,7 @@ sudo add-apt-repository universe -y
 sudo add-apt-repository ppa:agornostal/ulauncher -y
 
 # PPA for obs-studio
-sudo add-apt-repository ppa:obsproject/obs-studio
+sudo add-apt-repository ppa:obsproject/obs-studio -y
 
 # Before doing anything else, ALWAYS update current packages.
 sudo apt-get --assume-yes update
