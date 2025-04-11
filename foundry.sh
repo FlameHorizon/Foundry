@@ -142,6 +142,16 @@ done
 gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 6
 
+# Making bash case-insensitive
+#
+# If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
+# so it won't get overriden
+if [ ! -a ~/.inputrc ] ; then 
+  echo '$include /etc/inputrc' > ~/.inputrc; 
+  # Add shell-option to ~/.inputrc to enable case-insensitive tab completion
+  echo 'set completion-ignore-case On' >> ~/.inputrc
+fi
+
 # Things to install manually
 # - Firefox extensions
 # -- DarkReader
