@@ -142,6 +142,9 @@ done
 gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 6
 
+# Terminal window can be opened using Super+Return (Win key + Enter)
+gsettings set "org.gnome.settings-daemon.plugins.media-keys" "terminal" "['<Super>Return']"
+
 # Making bash case-insensitive
 #
 # If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
