@@ -1,4 +1,6 @@
 #!/bin/bash
+# If something fails, exit
+set -e
 
 # For dotnet, we are using PiPiAye (PPA)
 sudo add-apt-repository -y ppa:dotnet/backports
