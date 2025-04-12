@@ -89,7 +89,7 @@ fi
 # Install Google Chrome from .deb package.
 if [ ! -e /usr/bin/google-chrome ] ; then
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  sudo apt install google-chrome-stable_current_amd64.deb
+  sudo apt install ./google-chrome-stable_current_amd64.deb
   rm google-chrome-stable_current_amd64.deb
 else
   echo "Google Chrome is already installed. Skipping..."
@@ -97,7 +97,7 @@ fi
 
 # Install Virtualbox from .deb package.
 if [ ! -e /usr/bin/virtualbox ] ; then
-  wget https://download.virtualbox.org/virtualbox/7.1.6/virtualbox-7.1_7.1.6-167084~Ubuntu~noble_amd64.deb -o virtualbox.deb
+  wget -O "virtualbox.deb" "https://download.virtualbox.org/virtualbox/7.1.6/virtualbox-7.1_7.1.6-167084~Ubuntu~noble_amd64.deb"
   sudo apt install ./virtualbox.deb
   rm ./virtualbox.deb 
 else
@@ -123,6 +123,7 @@ if [ ! -e /usr/local/bin/lazygit ] ; then
   curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
   tar xf lazygit.tar.gz lazygit
   sudo install lazygit -D -t /usr/local/bin/
+  rm lazygit.tar.gz lazygit
 else
   echo "LazyGit is already installed. Skipping..."
 fi
