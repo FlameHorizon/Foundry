@@ -57,7 +57,7 @@ if [ ! -d /opt/nvim-linux-x86_64/ ] ; then
   sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
   rm nvim-linux-x86_64.tar.gz
 
-  echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.bashrc
+  echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.bashrc
   
   # Neovim configuration - kickstart
   git clone https://github.com/FlameHorizon/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
