@@ -230,6 +230,11 @@ echo "Installation completed. Please reboot your machine now."
 #
 # - Google Chrome extensions
 # -- DarkReader
+# -- LastPass
+# -- AdBlock
 #
 # - Google Chrome settings
 # -- Theme - Everforest Chrome Theme
+# -- Websearch engine - DuckDuckGo
+# -- Disable password saving (chrome://password-manager/settings)
+# -- Disable shortcuts on new pages
