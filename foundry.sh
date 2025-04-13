@@ -29,6 +29,7 @@ packages=(
   ulauncher
   obs-studio
   vlc
+  python3.12-venv
 )
 
 for pkg in "${packages[@]}"; do
