@@ -216,6 +216,9 @@ alias dw='dotnet watch'
 alias nv="nvim ."
 EOF
 
+# Source files .bashrc immediately
+. .bashrc
+
 echo "Installation completed. Please reboot your machine now."
 
 # Things to install manually
