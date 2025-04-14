@@ -129,6 +129,13 @@ else
   echo "LazyGit is already installed. Skipping..."
 fi
 
+# Install DBeaver Community
+if [ ! -e /usr/bin/dbeaver ] ; then
+  wget "https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
+  sudo apt install --assume-yes ./dbeaver-ce_latest_amd64.deb
+  rm dbeaver-ce_latest_amd64.deb
+fi
+
 # At this point, installation portion is completed. Now it is time to configure.
 # Alacritty needs everforest theme.
 
