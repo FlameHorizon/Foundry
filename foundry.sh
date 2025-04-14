@@ -99,7 +99,7 @@ fi
 # Install Virtualbox from .deb package.
 if [ ! -e /usr/bin/virtualbox ] ; then
   wget -O "virtualbox.deb" "https://download.virtualbox.org/virtualbox/7.1.6/virtualbox-7.1_7.1.6-167084~Ubuntu~noble_amd64.deb"
-  sudo apt install ./virtualbox.deb
+  sudo apt install --assume-yes ./virtualbox.deb
   rm ./virtualbox.deb 
 else
   echo "Virtualbox is already installed. Skipping..."
