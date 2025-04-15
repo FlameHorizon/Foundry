@@ -5,6 +5,7 @@ echo "Welcome to Foundry - your Ubuntu setup script. We will get you ready in ab
 # If something fails, exit
 set -e
 trap 'echo "❌ Error in $BASH_SOURCE on line $LINENO: $BASH_COMMAND" >&2' ERR
+start_time=$(date +%s)
 
 # For dotnet, we are using PiPiAye (PPA)
 echo "Adding dotnet/backports repository"
@@ -271,7 +272,13 @@ else
   echo "Visual Studio Code is already installed. Skipping..."
 fi
 
-echo "Installation completed. Please reboot your machine now."
+end_time=$(date +%s)
+duration=$((end_time - start_time))
+minutes=$((duration / 60))
+seconds=$((duration % 60))
+
+echo "✅ Script completed in ${minutes}m ${seconds}s."
+echo "Please reboot your machine now."
 
 # Things to install manually
 # - Firefox extensions
