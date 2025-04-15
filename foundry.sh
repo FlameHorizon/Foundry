@@ -1,9 +1,13 @@
 #!/bin/bash
+
+echo "Welcome to Foundy - your Ubuntu setup script. We will get you ready in about 10 mins"
+
 # If something fails, exit
 set -e
 trap 'echo "❌ Error in $BASH_SOURCE on line $LINENO: $BASH_COMMAND" >&2' ERR
 
 # For dotnet, we are using PiPiAye (PPA)
+echo "Adding dotnet/backports repository"
 sudo add-apt-repository -y ppa:dotnet/backports
 
 # This PPA is for ulauncher
