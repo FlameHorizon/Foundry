@@ -166,16 +166,9 @@ if [ ! -e /usr/bin/docker ] ; then
           exit 1
       fi
   fi
-  
-  echo "Adding current user to docker group"
-  # Activate the changes to groups.
-  sudo usermod -aG docker $USER
-  newgrp docker
 else
   echo "Docker is already installed. Skipping..."
 fi
-
-
 
 # Now it is time to configure.
 # Alacritty needs everforest theme.
@@ -302,3 +295,7 @@ echo "Installation completed. Please reboot your machine now."
 # -- Websearch engine - DuckDuckGo
 # -- Disable password saving (chrome://password-manager/settings)
 # -- Disable shortcuts on new pages
+#
+# - Docker - Adding user to docker group (via script it breaks it)
+#   sudo usermod -aG docker $USER
+#   newgrp docker
