@@ -117,6 +117,7 @@ else
 fi
 
 sudo snap install spotify
+sudo snap install rider --classic
 
 # Install LazyGit for neovim
 if [ ! -e /usr/local/bin/lazygit ] ; then
