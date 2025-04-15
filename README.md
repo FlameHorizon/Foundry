@@ -11,7 +11,7 @@ This Bash script automates the setup of a development environment on a fresh Ubu
   - Updates and upgrades system packages
 
 - Installs common dev tools:
-  - `curl`, `git`, `ripgrep`, `make`, `gcc`, `unzip`, `xclip`
+  - `curl`, `git`, `ripgrep`, `make`, `gcc`, `unzip`, `xclip`, `docker-ce`
   - `dotnet-sdk-9.0`, `alacritty`, `ulauncher`, `VS Code`, `virtualbox`, `python3.12-venv`, `dbeaver`, `rider`
 
 - Install common utilities:
