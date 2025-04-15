@@ -178,6 +178,8 @@ if [ ! -e /usr/bin/docker ] ; then
   # Activate the changes to groups.
   sudo usermod -aG docker $USER
   newgrp docker
+else
+  echo "Docker is already installed. Skipping..."
 fi
 
 # At this point, installation portion is completed. Now it is time to configure.
