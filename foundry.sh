@@ -36,6 +36,7 @@ packages=(
   obs-studio
   vlc
   python3.12-venv
+  thunderbird
 )
 
 for pkg in "${packages[@]}"; do
