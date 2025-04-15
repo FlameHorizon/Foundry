@@ -270,7 +270,7 @@ alias nv="nvim ."
 EOF
 
 # Source files .bashrc immediately
-. .bashrc
+. ~/.bashrc
 
 echo "Installation completed. Please reboot your machine now."
 
