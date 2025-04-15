@@ -15,7 +15,7 @@ This Bash script automates the setup of a development environment on a fresh Ubu
   - `dotnet-sdk-9.0`, `alacritty`, `ulauncher`, `VS Code`, `virtualbox`, `python3.12-venv`, `dbeaver`, `rider`
 
 - Install common utilities:
- - `spotify`, `obs-studio`, `vlc`
+ - `spotify`, `obs-studio`, `vlc`, `thunderbird`
 
 - Installs **Neovim 0.11.0 manually* (APT version is too old)
 
