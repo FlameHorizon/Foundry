@@ -1,6 +1,7 @@
 #!/bin/bash
 # If something fails, exit
 set -e
+trap 'echo "❌ Error in $BASH_SOURCE on line $LINENO: $BASH_COMMAND" >&2' ERR
 
 # For dotnet, we are using PiPiAye (PPA)
 sudo add-apt-repository -y ppa:dotnet/backports
