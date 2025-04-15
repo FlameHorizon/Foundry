@@ -176,6 +176,7 @@ else
     fi
 fi
 
+echo "Adding current user to docker group"
 # Activate the changes to groups.
 sudo usermod -aG docker $USER
 newgrp docker
