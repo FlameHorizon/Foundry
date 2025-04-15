@@ -140,47 +140,45 @@ fi
 
 # Install Docker
 # Following guide from Docker's docs.: https://docs.docker.com/engine/install/ubuntu/
-#
-# Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
-
-# Add the repository to Apt sources:
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
-
-# Install latest version
-sudo apt-get install --assume-yes docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-# Verify
-sudo docker run hello-world
-
-# Manage Docker as a non-root user
-GROUP_NAME="docker"
-
-if getent group "$GROUP_NAME" > /dev/null 2>&1; then
-    echo "Group '$GROUP_NAME' already exists."
-else
-    echo "Group '$GROUP_NAME' does not exist. Creating..."
-    sudo groupadd "$GROUP_NAME"
-    if [ $? -eq 0 ]; then
-        echo "Group '$GROUP_NAME' created successfully."
-    else
-        echo "Failed to create group '$GROUP_NAME'."
-        exit 1
-    fi
+if [ ! -e /usr/bin/docker ] ; then
+  # Add Docker's official GPG key:
+  sudo apt-get update
+  sudo apt-get install ca-certificates curl
+  sudo install -m 0755 -d /etc/apt/keyrings
+  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+  sudo chmod a+r /etc/apt/keyrings/docker.asc
+  
+  # Add the repository to Apt sources:
+  echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+    $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  sudo apt-get update
+  
+  # Install latest version
+  sudo apt-get install --assume-yes docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  
+  # Manage Docker as a non-root user
+  GROUP_NAME="docker"
+  
+  if getent group "$GROUP_NAME" > /dev/null 2>&1; then
+      echo "Group '$GROUP_NAME' already exists."
+  else
+      echo "Group '$GROUP_NAME' does not exist. Creating..."
+      sudo groupadd "$GROUP_NAME"
+      if [ $? -eq 0 ]; then
+          echo "Group '$GROUP_NAME' created successfully."
+      else
+          echo "Failed to create group '$GROUP_NAME'."
+          exit 1
+      fi
+  fi
+  
+  echo "Adding current user to docker group"
+  # Activate the changes to groups.
+  sudo usermod -aG docker $USER
+  newgrp docker
 fi
-
-echo "Adding current user to docker group"
-# Activate the changes to groups.
-sudo usermod -aG docker $USER
-newgrp docker
 
 # At this point, installation portion is completed. Now it is time to configure.
 # Alacritty needs everforest theme.
