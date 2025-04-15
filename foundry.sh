@@ -160,6 +160,26 @@ sudo apt-get install --assume-yes docker-ce docker-ce-cli containerd.io docker-b
 # Verify
 sudo docker run hello-world
 
+# Manage Docker as a non-root user
+GROUP_NAME="docker"
+
+if getent group "$GROUP_NAME" > /dev/null 2>&1; then
+    echo "Group '$GROUP_NAME' already exists."
+else
+    echo "Group '$GROUP_NAME' does not exist. Creating..."
+    sudo groupadd "$GROUP_NAME"
+    if [ $? -eq 0 ]; then
+        echo "Group '$GROUP_NAME' created successfully."
+    else
+        echo "Failed to create group '$GROUP_NAME'."
+        exit 1
+    fi
+fi
+
+# Activate the changes to groups.
+sudo usermod -aG docker $USER
+newgrp docker
+
 # At this point, installation portion is completed. Now it is time to configure.
 # Alacritty needs everforest theme.
 
