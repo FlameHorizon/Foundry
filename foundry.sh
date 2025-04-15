@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Welcome to Foundy - your Ubuntu setup script. We will get you ready in about 10 mins"
+echo "Welcome to Foundry - your Ubuntu setup script. We will get you ready in about 10 mins"
 
 # If something fails, exit
 set -e
