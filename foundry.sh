@@ -306,3 +306,8 @@ echo "Please reboot your machine now."
 # - Docker - Adding user to docker group (via script it breaks it)
 #   sudo usermod -aG docker $USER
 #   newgrp docker
+#
+# - Set keyboard shortcuts
+# -- Launchers > Home Folder - Super+F
+# -- Launchers > Launch email client - Super+E
+# -- Launchers > > Launch web browser - Super+B
