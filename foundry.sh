@@ -273,7 +273,7 @@ else
   echo "Visual Studio Code is already installed. Skipping..."
 fi
 
-sudo apt-mark hold curl git ripgrep make gcc unzip xclip dotnet-sdk-9.0 alacritty ulauncher obs-studio vlc python3.12-venv thunderbird google-chrome-stable virtualbox* dbeaver docker* code
+sudo apt-mark hold curl git ripgrep make gcc unzip xclip dotnet-sdk-9.0 alacritty ulauncher obs-studio vlc python3.12-venv thunderbird google-chrome-stable virtualbox* dbeaver* docker* code
 
 
 end_time=$(date +%s)
