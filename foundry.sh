@@ -289,6 +289,8 @@ echo "Please reboot your machine now."
 # -- DarkReader
 # -- LastPass
 # -- AdBlock for Firefox
+# -- I still don't care about cookies
+# -- Decentraleyes
 #
 # - Firefox settings
 # -- Theme - Everforest Dark Medium Theme by Bullfinch
