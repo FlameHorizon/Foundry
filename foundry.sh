@@ -285,4 +285,4 @@ echo "Please reboot your machine now."
 # -- Launchers > Home Folder - Super+F
 # -- Launchers > Launch email client - Super+E
 # -- Launchers > > Launch web browser - Super+B
-# -- Custom Shortcuts > Rofi dmenu - Super-Space, command rofi -show drun -normal-window
+# -- Custom Shortcuts > Rofi dmenu - Super-Space, command rofi -show drun -normal-window -theme gruvbox-dark-hard
