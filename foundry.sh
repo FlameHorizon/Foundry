@@ -27,7 +27,6 @@ packages=(
   unzip
   xclip
   dotnet-sdk-9.0
-  alacritty
   rofi
   obs-studio
   vlc
@@ -167,19 +166,6 @@ else
   echo "Docker is already installed. Skipping..."
 fi
 
-# Now it is time to configure.
-# Alacritty needs everforest theme.
-
-if [ ! -d ~/.config/alacritty ] ; then
-  mkdir -p ~/.config/alacritty
-  cp alacritty.toml ~/.config/alacritty/alacritty.toml
-else
-  echo "Alacritty is already installed. Skipping..."
-fi
-
-# Once alacritty is installed, change default terminal in GNOME.
-gsettings set org.gnome.desktop.default-applications.terminal exec 'alacritty'
-
 # Set dark mode in GNOME
 gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
@@ -257,7 +243,7 @@ else
   echo "Visual Studio Code is already installed. Skipping..."
 fi
 
-sudo apt-mark hold curl git ripgrep make gcc unzip xclip dotnet-sdk-9.0 alacritty rofi obs-studio vlc python3.12-venv thunderbird google-chrome-stable virtualbox* dbeaver* docker* code
+sudo apt-mark hold curl git ripgrep make gcc unzip xclip dotnet-sdk-9.0 rofi obs-studio vlc python3.12-venv thunderbird google-chrome-stable virtualbox* dbeaver* docker* code
 
 end_time=$(date +%s)
 duration=$((end_time - start_time))
