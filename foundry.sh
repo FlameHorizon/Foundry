@@ -11,10 +11,6 @@ start_time=$(date +%s)
 echo "Adding dotnet/backports repository"
 sudo add-apt-repository -y ppa:dotnet/backports
 
-# This PPA is for ulauncher
-sudo add-apt-repository universe -y
-sudo add-apt-repository ppa:agornostal/ulauncher -y
-
 # PPA for obs-studio
 sudo add-apt-repository ppa:obsproject/obs-studio -y
 
@@ -32,7 +28,7 @@ packages=(
   xclip
   dotnet-sdk-9.0
   alacritty
-  ulauncher
+  rofi
   obs-studio
   vlc
   python3.12-venv
@@ -184,18 +180,6 @@ fi
 # Once alacritty is installed, change default terminal in GNOME.
 gsettings set org.gnome.desktop.default-applications.terminal exec 'alacritty'
 
-# Update ulauncher settings
-# Start ulauncher to have it populate config before we overwrite
-if [ ! -d ~/.config/autostart/ ] ; then
-  mkdir -p ~/.config/autostart/
-  cp ulauncher.desktop ~/.config/autostart/ulauncher.desktop
-  gtk-launch ulauncher.desktop >/dev/null 2>&1
-  sleep 2 # ensure enough time for ulauncher to set defaults
-  cp ulauncher.json ~/.config/ulauncher/settings.json
-else
-  echo "Ulauncher is already installed. Skipping..."
-fi
-
 # Set dark mode in GNOME
 gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
@@ -273,8 +257,7 @@ else
   echo "Visual Studio Code is already installed. Skipping..."
 fi
 
-sudo apt-mark hold curl git ripgrep make gcc unzip xclip dotnet-sdk-9.0 alacritty ulauncher obs-studio vlc python3.12-venv thunderbird google-chrome-stable virtualbox* dbeaver* docker* code
-
+sudo apt-mark hold curl git ripgrep make gcc unzip xclip dotnet-sdk-9.0 alacritty rofi obs-studio vlc python3.12-venv thunderbird google-chrome-stable virtualbox* dbeaver* docker* code
 
 end_time=$(date +%s)
 duration=$((end_time - start_time))
@@ -316,3 +299,4 @@ echo "Please reboot your machine now."
 # -- Launchers > Home Folder - Super+F
 # -- Launchers > Launch email client - Super+E
 # -- Launchers > > Launch web browser - Super+B
+# -- Custom Shortcuts > Rofi dmenu - Super-Space, command rofi -show drun -normal-window
