@@ -11,7 +11,7 @@ This Bash script automates the setup of a development environment on a fresh Ubu
 
 - Installs common dev tools:
   - `curl`, `git`, `ripgrep`, `make`, `gcc`, `unzip`, `xclip`, `docker-ce`
-  - `dotnet-sdk-9.0`, `ulauncher`, `VS Code`, `virtualbox`, `python3.12-venv`, `dbeaver`, `rider`
+  - `dotnet-sdk-9.0`, `VS Code`, `virtualbox`, `python3.12-venv`, `dbeaver`, `rider`
 
 - Install common utilities:
  - `spotify`, `obs-studio`, `vlc`, `thunderbird`
