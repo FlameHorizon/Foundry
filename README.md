@@ -6,13 +6,12 @@ This Bash script automates the setup of a development environment on a fresh Ubu
 
 - Adds PPAs for:
   - .NET SDK via `dotnet/backports`
-  - Ulauncher via `agornostal/ulauncher`
   - OBS via via `obsproject/obs-studio`
   - Updates and upgrades system packages
 
 - Installs common dev tools:
   - `curl`, `git`, `ripgrep`, `make`, `gcc`, `unzip`, `xclip`, `docker-ce`
-  - `dotnet-sdk-9.0`, `alacritty`, `ulauncher`, `VS Code`, `virtualbox`, `python3.12-venv`, `dbeaver`, `rider`
+  - `dotnet-sdk-9.0`, `ulauncher`, `VS Code`, `virtualbox`, `python3.12-venv`, `dbeaver`, `rider`
 
 - Install common utilities:
  - `spotify`, `obs-studio`, `vlc`, `thunderbird`
@@ -26,8 +25,7 @@ This Bash script automates the setup of a development environment on a fresh Ubu
   - git credential helper
 
 - Applies GNOME customizations:
-  - Sets Alacritty as default terminal
-  - Installs and configures Ulauncher
+  - Installs rofi
   - Enables dark theme system-wide
   - Disables Ubuntu Dock
   - Sets workspace switching shortcuts to Super + 1..9
@@ -41,8 +39,8 @@ system were not tested.
 # 🧪 Usage
 
 Run the script with:
-```
-bash ./foundry.sh
+```bash
+sudo ./foundry.sh
 ```
 
 ⚠️ The script uses `sudo` – you’ll need admin privileges.
